@@ -15,5 +15,7 @@ RUN apk --no-cache --update add bash curl less groff jq python py-pip && \
   mkdir /root/.aws && \
   aws --version
 RUN apk add --update coreutils bash && rm -rf /var/cache/apk/*
+COPY aws-cleaner.sh /scrypt/
+RUN chmod +x /scrypt/aws-cleaner.sh
 WORKDIR /go
 CMD /bin/ash
