@@ -14,5 +14,6 @@ RUN apk --no-cache --update add bash curl less groff jq python py-pip && \
   pip install --no-cache-dir awscli==1.16.240 && \
   mkdir /root/.aws && \
   aws --version
+RUN apk add --update coreutils bash && rm -rf /var/cache/apk/*
 WORKDIR /go
 CMD /bin/ash
