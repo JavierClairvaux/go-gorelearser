@@ -1,0 +1,15 @@
+kind: pipeline
+type: docker
+name: image builder
+
+steps:
+  - name: test
+    image: ubuntu:latest
+    commands:
+    - echo "got here"
+trigger:
+  branch:
+  - master
+  event:
+  - tag 
+  - push                  
