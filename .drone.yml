@@ -7,6 +7,7 @@ steps:
     image: ubuntu:latest
     commands:
     - echo "got here"
+    - echo $DRONE_TAG
 trigger:
   branch:
   - master
